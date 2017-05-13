@@ -24,16 +24,16 @@ if (user != '') {
 
 var password = localStorage.getItem('sfs_password') || '';
 
-var str = [];
-for (var name in data) {
-    str.push(data[name]);
-}
-str.push(password);
-data['sign'] = md5(str.join(";"));
-
 if (data['uid'] != '' && password != '') {
+    var str = [];
+    for (var name in data) {
+        str.push(data[name]);
+    }
+    str.push(password);
+    data['sign'] = md5(str.join(";"));
+
     var req = new XMLHttpRequest();
-    req.open("POST", "https://stopforumspam.subnets.ru/api/query.php", false);
+    req.open("POST", "https://stopforumspam.subnets.ru/api/query.php", true);
     req.setRequestHeader('Content-Type', 'application/json');
     req.addEventListener("load", function () {
         if (req.status < 400)
