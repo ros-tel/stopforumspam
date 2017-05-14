@@ -1,9 +1,4 @@
 javascript:(function inline(){
-    window.StopForumSpam=window.StopForumSpam || {};
-    window.StopForumSpam={
-        origin:window.location.protocol + '//' + window.location.host,loaderVersion:1.1,timedOut:true
-    };
-
     var md5s=document.createElement('script');
     md5s.type = 'text/javascript';
     md5s.async = false;

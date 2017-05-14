@@ -1,8 +1,4 @@
 javascript:(function inline(){
-    window.StopForumSpam=window.StopForumSpam || {};
-    window.StopForumSpam={
-        origin:window.location.protocol + '//' + window.location.host,loaderVersion:1.1,timedOut:true};
-
     var userById = document.getElementById('user');
     var user = userById.value;
 
